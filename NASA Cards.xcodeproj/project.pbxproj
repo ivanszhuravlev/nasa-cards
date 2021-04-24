@@ -7,19 +7,53 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		49A0910D2632C1FD002A3D10 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A0910C2632C1FD002A3D10 /* Photo.swift */; };
+		49A091162632E6C8002A3D10 /* CardsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A091152632E6C8002A3D10 /* CardsModel.swift */; };
+		49A0913026330888002A3D10 /* CardsApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A0912F26330888002A3D10 /* CardsApi.swift */; };
+		49A0913526330E6E002A3D10 /* CardsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A0913426330E6E002A3D10 /* CardsViewModel.swift */; };
+		49A0914F26332468002A3D10 /* PhotoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A0914E26332468002A3D10 /* PhotoViewModel.swift */; };
+		49A091572633264B002A3D10 /* PhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A091562633264B002A3D10 /* PhotoView.swift */; };
+		49A0915C26333F3A002A3D10 /* CardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A0915B26333F3A002A3D10 /* CardsView.swift */; };
+		49A0915F2633413B002A3D10 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A0915E2633413B002A3D10 /* Card.swift */; };
 		49B8F08126317BA8005B53FF /* NASA_CardsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B8F08026317BA8005B53FF /* NASA_CardsApp.swift */; };
 		49B8F08326317BA8005B53FF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B8F08226317BA8005B53FF /* ContentView.swift */; };
 		49B8F08526317BAA005B53FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49B8F08426317BAA005B53FF /* Assets.xcassets */; };
 		49B8F08826317BAA005B53FF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49B8F08726317BAA005B53FF /* Preview Assets.xcassets */; };
+		49B8F09426318270005B53FF /* IBMPlexSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 49B8F09126318270005B53FF /* IBMPlexSans-Medium.ttf */; };
+		49B8F09526318270005B53FF /* icomoon.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 49B8F09226318270005B53FF /* icomoon.ttf */; };
+		49B8F09626318270005B53FF /* IBMPlexSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 49B8F09326318270005B53FF /* IBMPlexSans-Regular.ttf */; };
+		49B8F09A26318347005B53FF /* CardsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B8F09926318347005B53FF /* CardsScreen.swift */; };
+		49B8F09E26318386005B53FF /* ScreenContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B8F09D26318386005B53FF /* ScreenContainer.swift */; };
+		49B8F0A12631853A005B53FF /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B8F0A02631853A005B53FF /* ApiClient.swift */; };
+		49B8F0A82631BCA5005B53FF /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 49B8F0A72631BCA5005B53FF /* Podfile */; };
+		6482FFB86B4BEC8E21D55A9F /* libPods-NASA Cards.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EF43E01BD0B112F1BA58F4E1 /* libPods-NASA Cards.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		49A0910C2632C1FD002A3D10 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		49A091152632E6C8002A3D10 /* CardsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsModel.swift; sourceTree = "<group>"; };
+		49A0912F26330888002A3D10 /* CardsApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsApi.swift; sourceTree = "<group>"; };
+		49A0913426330E6E002A3D10 /* CardsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsViewModel.swift; sourceTree = "<group>"; };
+		49A0914E26332468002A3D10 /* PhotoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewModel.swift; sourceTree = "<group>"; };
+		49A091562633264B002A3D10 /* PhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoView.swift; sourceTree = "<group>"; };
+		49A0915B26333F3A002A3D10 /* CardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsView.swift; sourceTree = "<group>"; };
+		49A0915E2633413B002A3D10 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		49B8F07D26317BA7005B53FF /* NASA Cards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NASA Cards.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		49B8F08026317BA8005B53FF /* NASA_CardsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NASA_CardsApp.swift; sourceTree = "<group>"; };
 		49B8F08226317BA8005B53FF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		49B8F08426317BAA005B53FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		49B8F08726317BAA005B53FF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		49B8F08926317BAA005B53FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		49B8F08926317BAA005B53FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "NASA Cards/Info.plist"; sourceTree = SOURCE_ROOT; };
+		49B8F09126318270005B53FF /* IBMPlexSans-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IBMPlexSans-Medium.ttf"; sourceTree = "<group>"; };
+		49B8F09226318270005B53FF /* icomoon.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = icomoon.ttf; sourceTree = "<group>"; };
+		49B8F09326318270005B53FF /* IBMPlexSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IBMPlexSans-Regular.ttf"; sourceTree = "<group>"; };
+		49B8F09926318347005B53FF /* CardsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsScreen.swift; sourceTree = "<group>"; };
+		49B8F09D26318386005B53FF /* ScreenContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenContainer.swift; sourceTree = "<group>"; };
+		49B8F0A02631853A005B53FF /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
+		49B8F0A72631BCA5005B53FF /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; fileEncoding = 4; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		4DE5A2136356E894C7346549 /* Pods-NASA Cards.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NASA Cards.release.xcconfig"; path = "Target Support Files/Pods-NASA Cards/Pods-NASA Cards.release.xcconfig"; sourceTree = "<group>"; };
+		C2FADB7C95CB176655207EEA /* Pods-NASA Cards.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NASA Cards.debug.xcconfig"; path = "Target Support Files/Pods-NASA Cards/Pods-NASA Cards.debug.xcconfig"; sourceTree = "<group>"; };
+		EF43E01BD0B112F1BA58F4E1 /* libPods-NASA Cards.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NASA Cards.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,17 +61,60 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6482FFB86B4BEC8E21D55A9F /* libPods-NASA Cards.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		49A0910B2632C1EF002A3D10 /* types */ = {
+			isa = PBXGroup;
+			children = (
+				49A0910C2632C1FD002A3D10 /* Photo.swift */,
+			);
+			path = types;
+			sourceTree = "<group>";
+		};
+		49A0912D26330871002A3D10 /* modules */ = {
+			isa = PBXGroup;
+			children = (
+				49A09145263323EF002A3D10 /* Photo */,
+				49A0912E26330876002A3D10 /* Cards */,
+			);
+			path = modules;
+			sourceTree = "<group>";
+		};
+		49A0912E26330876002A3D10 /* Cards */ = {
+			isa = PBXGroup;
+			children = (
+				49A091152632E6C8002A3D10 /* CardsModel.swift */,
+				49A0915B26333F3A002A3D10 /* CardsView.swift */,
+				49A0912F26330888002A3D10 /* CardsApi.swift */,
+				49A0913426330E6E002A3D10 /* CardsViewModel.swift */,
+				49A0915E2633413B002A3D10 /* Card.swift */,
+			);
+			path = Cards;
+			sourceTree = "<group>";
+		};
+		49A09145263323EF002A3D10 /* Photo */ = {
+			isa = PBXGroup;
+			children = (
+				49A0914E26332468002A3D10 /* PhotoViewModel.swift */,
+				49A091562633264B002A3D10 /* PhotoView.swift */,
+			);
+			path = Photo;
+			sourceTree = "<group>";
+		};
 		49B8F07426317BA7005B53FF = {
 			isa = PBXGroup;
 			children = (
+				49B8F0A72631BCA5005B53FF /* Podfile */,
+				49B8F09026318257005B53FF /* fonts */,
 				49B8F07F26317BA8005B53FF /* NASA Cards */,
 				49B8F07E26317BA7005B53FF /* Products */,
+				FF8485B398B10D3C140D89F2 /* Pods */,
+				B846A1BE74E14183C5239945 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -52,11 +129,16 @@
 		49B8F07F26317BA8005B53FF /* NASA Cards */ = {
 			isa = PBXGroup;
 			children = (
+				49A0910B2632C1EF002A3D10 /* types */,
 				49B8F08026317BA8005B53FF /* NASA_CardsApp.swift */,
 				49B8F08226317BA8005B53FF /* ContentView.swift */,
+				49B8F09C26318373005B53FF /* components */,
+				49B8F09826318331005B53FF /* screens */,
 				49B8F08426317BAA005B53FF /* Assets.xcassets */,
 				49B8F08926317BAA005B53FF /* Info.plist */,
+				49A0912D26330871002A3D10 /* modules */,
 				49B8F08626317BAA005B53FF /* Preview Content */,
+				49B8F0A02631853A005B53FF /* ApiClient.swift */,
 			);
 			path = "NASA Cards";
 			sourceTree = "<group>";
@@ -69,6 +151,49 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		49B8F09026318257005B53FF /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				49B8F09126318270005B53FF /* IBMPlexSans-Medium.ttf */,
+				49B8F09326318270005B53FF /* IBMPlexSans-Regular.ttf */,
+				49B8F09226318270005B53FF /* icomoon.ttf */,
+			);
+			path = fonts;
+			sourceTree = "<group>";
+		};
+		49B8F09826318331005B53FF /* screens */ = {
+			isa = PBXGroup;
+			children = (
+				49B8F09926318347005B53FF /* CardsScreen.swift */,
+			);
+			path = screens;
+			sourceTree = "<group>";
+		};
+		49B8F09C26318373005B53FF /* components */ = {
+			isa = PBXGroup;
+			children = (
+				49B8F09D26318386005B53FF /* ScreenContainer.swift */,
+			);
+			path = components;
+			sourceTree = "<group>";
+		};
+		B846A1BE74E14183C5239945 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EF43E01BD0B112F1BA58F4E1 /* libPods-NASA Cards.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FF8485B398B10D3C140D89F2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C2FADB7C95CB176655207EEA /* Pods-NASA Cards.debug.xcconfig */,
+				4DE5A2136356E894C7346549 /* Pods-NASA Cards.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -76,6 +201,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 49B8F08C26317BAA005B53FF /* Build configuration list for PBXNativeTarget "NASA Cards" */;
 			buildPhases = (
+				BAD4DDBBE4E9A4310456C8F8 /* [CP] Check Pods Manifest.lock */,
 				49B8F07926317BA7005B53FF /* Sources */,
 				49B8F07A26317BA7005B53FF /* Frameworks */,
 				49B8F07B26317BA7005B53FF /* Resources */,
@@ -126,20 +252,60 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49B8F0A82631BCA5005B53FF /* Podfile in Resources */,
+				49B8F09426318270005B53FF /* IBMPlexSans-Medium.ttf in Resources */,
 				49B8F08826317BAA005B53FF /* Preview Assets.xcassets in Resources */,
+				49B8F09626318270005B53FF /* IBMPlexSans-Regular.ttf in Resources */,
 				49B8F08526317BAA005B53FF /* Assets.xcassets in Resources */,
+				49B8F09526318270005B53FF /* icomoon.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		BAD4DDBBE4E9A4310456C8F8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NASA Cards-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		49B8F07926317BA7005B53FF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49A091572633264B002A3D10 /* PhotoView.swift in Sources */,
+				49A0914F26332468002A3D10 /* PhotoViewModel.swift in Sources */,
+				49A0910D2632C1FD002A3D10 /* Photo.swift in Sources */,
 				49B8F08326317BA8005B53FF /* ContentView.swift in Sources */,
+				49A0915F2633413B002A3D10 /* Card.swift in Sources */,
+				49A0913526330E6E002A3D10 /* CardsViewModel.swift in Sources */,
+				49A091162632E6C8002A3D10 /* CardsModel.swift in Sources */,
+				49A0915C26333F3A002A3D10 /* CardsView.swift in Sources */,
+				49B8F09A26318347005B53FF /* CardsScreen.swift in Sources */,
 				49B8F08126317BA8005B53FF /* NASA_CardsApp.swift in Sources */,
+				49B8F09E26318386005B53FF /* ScreenContainer.swift in Sources */,
+				49A0913026330888002A3D10 /* CardsApi.swift in Sources */,
+				49B8F0A12631853A005B53FF /* ApiClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,6 +430,7 @@
 		};
 		49B8F08D26317BAA005B53FF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C2FADB7C95CB176655207EEA /* Pods-NASA Cards.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -286,6 +453,7 @@
 		};
 		49B8F08E26317BAA005B53FF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4DE5A2136356E894C7346549 /* Pods-NASA Cards.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
