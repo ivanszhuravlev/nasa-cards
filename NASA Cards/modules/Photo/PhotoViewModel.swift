@@ -17,16 +17,6 @@ class PhotoViewModel: ObservableObject {
         loadImage()
     }
     
-//    private func loadImage() {
-//        AF.request(URL(string: self.url)!).response { response in
-//            print("DATA", self.url)
-//            if response.data != nil {
-////                print("LOADED", )
-//                self.image = UIImage(data: response.data!)
-//            }
-//        }
-//    }
-    
     func loadImage() {
         let url = URL(string: self.url.replacingOccurrences(of: "http:", with: "https:"))!
         let task = URLSession.shared.dataTask(with: url, completionHandler: getImageFromResponse(data:response:error:))
@@ -50,7 +40,7 @@ class PhotoViewModel: ObservableObject {
             guard let loadedImage = UIImage(data: data) else {
                 return
             }
-            self.image = loadedImage
+//            self.image = loadedImage
         }
     }
 }

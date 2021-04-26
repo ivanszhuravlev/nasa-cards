@@ -7,16 +7,16 @@
 
 import Foundation
 
-//protocol PhotoProtocol {
-//    var id: Int? { get set }
-//    var sol: Int? { get set }
+protocol CardProtocol: Identifiable {
+    var id: Int? { get }
+    var sol: Int? { get }
 //    var camera: Camera? { get set }
-//    var img_src: String? { get set }
-//    var earth_date: String? { get set }
-//    var rover: Rover?
-//}
+    var img_src: String? { get }
+    var earth_date: String? { get }
+//    var rover: Rover? { get set }
+}
 
-struct Photo: Codable, Identifiable {
+struct Photo: CardProtocol, Codable {
     let id: Int?
     let sol: Int?
 //    let camera: Camera?
@@ -88,4 +88,21 @@ struct Rover: Codable, Identifiable {
     }
     
 //    init() { }
+}
+
+struct CardStateful: CardProtocol {
+//    var photo: Photo
+    var state: CardState
+    let id: Int?
+    let sol: Int?
+    let img_src: String?
+    let earth_date: String?
+    
+    init (photo: Photo, state: CardState) {
+        self.id = photo.id
+        self.sol = photo.sol
+        self.img_src = photo.img_src
+        self.earth_date = photo.earth_date
+        self.state = state
+    }
 }

@@ -15,7 +15,11 @@ struct PhotoView: View {
     }
     
     var body: some View {
-        Image(uiImage: model.image ?? PhotoView.defaultImage!)
+        if model.image != nil {
+            Image(uiImage: model.image!)
+        } else {
+            Color(UIColor.red)
+        }
     }
     
     static var defaultImage = UIImage(systemName: "photo")

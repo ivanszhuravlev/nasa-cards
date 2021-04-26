@@ -10,11 +10,17 @@ import SwiftUI
 struct CardsView: View {
     @ObservedObject var controller = CardsViewModel()
     
+    @State var cardsToRemoveCount: Int = 0
+    
+    @State var activeCards: [CardStateful] = []
+    
+    
     var body: some View {
         GeometryReader { window in
             ZStack {
                 GeometryReader { geometry in
-                    ForEach(controller.activePhotos) {photo in
+                    
+                    ForEach(controller.activePhotos, id: \.self.id) {photo in
                         return renderCard(photo: photo, size: geometry.size)
                     }
                 }
@@ -27,7 +33,7 @@ struct CardsView: View {
         }
     }
     
-    private func renderCard(photo: Photo, size: CGSize) -> some View {
+    private func renderCard(photo: CardStateful, size: CGSize) -> some View {
         let index = controller.activePhotos.firstIndex { item in
             item.id == photo.id
         }
@@ -35,10 +41,14 @@ struct CardsView: View {
         var offset: CGSize {
             index == 0 ? cardOffset : .zero
         }
+        
+        let card = Group {
+                Card(url: photo.img_src!, size: size, state: photo.state)
+                .frame(width: size.width,  alignment: .center)
+                .offset(offset)
+            }
 
-        return Card(url: photo.img_src!, size: size, index: index!)
-            .frame(width: size.width,  alignment: .center)
-            .offset(offset)
+        return card
     }
     
     @GestureState var swipeDistance: CGSize = .zero
@@ -73,17 +83,17 @@ struct CardsView: View {
     
     private func moveCard(isLiked: Bool, winWidth: CGFloat) {
         let x = isLiked ? winWidth : -winWidth
+
+        steadySwipeDistance = CGSize(width: x, height: 0)
         
-        withAnimation(Animation.linear(duration: animationDurationMove)) {
-            steadySwipeDistance = CGSize(width: x, height: 0)
+        Timer.scheduledTimer(withTimeInterval: 0.1, repeats: false) { timer in
+            controller.rearrangeCards()
+            controller.removeFirstCard()
+            resetCardOffset()
         }
     }
     
     private func resetCardOffset() {
-        withAnimation(Animation.linear(duration: animationDurationMove)) {
-            steadySwipeDistance = .zero
-        }
+        steadySwipeDistance = .zero
     }
-    
-    private var animationDurationMove: Double = 0.12
 }
