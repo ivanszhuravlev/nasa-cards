@@ -31,7 +31,6 @@ struct Card: View {
                 .cornerRadius(10.0)
                 .offset(x: 0.0, y: offset)
                 .zIndex(zIndex)
-//                .padding()
                 .shadow(color: Color.black.opacity(0.4), radius: 6, x: 0.0, y: 0.0)
                 .opacity(opacity)
         }        

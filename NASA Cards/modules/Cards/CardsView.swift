@@ -11,23 +11,19 @@ struct CardsView: View {
     @ObservedObject var controller = CardsViewModel()
     
     var body: some View {
-        ZStack {
-            GeometryReader { geometry in
-//            List {
-                ForEach(controller.activePhotos) {photo in
-//                    let index = controller.activePhotos.firstIndex { item in
-//                        item.id == photo.id
-//                    }
-////                    PhotoView(url: card.img_src!).clipped()
-//                    return Card(url: photo.img_src!, size: getCardSizeByIndex(index: index, size: geometry.size))
-                    return renderCard(photo: photo, size: geometry.size)
+        GeometryReader { window in
+            ZStack {
+                GeometryReader { geometry in
+                    ForEach(controller.activePhotos) {photo in
+                        return renderCard(photo: photo, size: geometry.size)
+                    }
                 }
-//            }
-            }.clipped()
-        }
-        .padding()
-        .onAppear {
-            controller.getCards()
+            }
+            .padding()
+            .gesture(self.swipeGesture(winSize: window.size))
+            .onAppear {
+                controller.getCards()
+            }
         }
     }
     
@@ -35,11 +31,59 @@ struct CardsView: View {
         let index = controller.activePhotos.firstIndex { item in
             item.id == photo.id
         }
-
-        return Group {
-            Card(url: photo.img_src!, size: size, index: index!)
+        
+        var offset: CGSize {
+            index == 0 ? cardOffset : .zero
         }
-        .frame(width: size.width,  alignment: .center)
-//        .over
+
+        return Card(url: photo.img_src!, size: size, index: index!)
+            .frame(width: size.width,  alignment: .center)
+            .offset(offset)
     }
+    
+    @GestureState var swipeDistance: CGSize = .zero
+    @State var steadySwipeDistance: CGSize = .zero
+    
+    var cardOffset: CGSize {
+        CGSize(
+            width: swipeDistance.width + steadySwipeDistance.width,
+            height: swipeDistance.height + steadySwipeDistance.height
+        )
+    }
+    
+    private func swipeGesture(winSize: CGSize) -> some Gesture {
+        return DragGesture()
+            .updating($swipeDistance) { latestSwipeDistance, gestureDistance, transaction in
+                var translation = latestSwipeDistance.translation
+                translation.width *= 1.2
+                gestureDistance = translation
+            }
+            .onEnded { finalDistance in
+                steadySwipeDistance = finalDistance.translation
+                let translation = finalDistance.translation.width,
+                    isGonnaFireAction = abs(translation) > winSize.width / 5 * 2
+
+                if isGonnaFireAction {
+                    moveCard(isLiked: translation > 0, winWidth: winSize.width)
+                } else {
+                    resetCardOffset()
+                }
+            }
+    }
+    
+    private func moveCard(isLiked: Bool, winWidth: CGFloat) {
+        let x = isLiked ? winWidth : -winWidth
+        
+        withAnimation(Animation.linear(duration: animationDurationMove)) {
+            steadySwipeDistance = CGSize(width: x, height: 0)
+        }
+    }
+    
+    private func resetCardOffset() {
+        withAnimation(Animation.linear(duration: animationDurationMove)) {
+            steadySwipeDistance = .zero
+        }
+    }
+    
+    private var animationDurationMove: Double = 0.12
 }
