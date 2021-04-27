@@ -21,6 +21,10 @@ class CardsViewModel: ObservableObject {
     
     var activePhotos: [CardStateful] = []
     
+    var count: Int {
+        model.photos.count
+    }
+    
     init() {
         
     }

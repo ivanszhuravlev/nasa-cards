@@ -17,18 +17,73 @@ struct CardsView: View {
     
     var body: some View {
         GeometryReader { window in
-            ZStack {
-                GeometryReader { geometry in
-                    
-                    ForEach(controller.activePhotos, id: \.self.id) {photo in
-                        return renderCard(photo: photo, size: geometry.size)
+            VStack {
+                ZStack {
+                    GeometryReader { geometry in
+                        ForEach(controller.activePhotos, id: \.self.id) {photo in
+                            return renderCard(photo: photo, size: geometry.size)
+                        }
                     }
                 }
-            }
-            .padding()
-            .gesture(self.swipeGesture(winSize: window.size))
-            .onAppear {
-                controller.getCards()
+                .padding(.horizontal)
+                .gesture(self.swipeGesture(winSize: window.size))
+                .onAppear {
+                    controller.getCards()
+                }
+                HStack {
+                    RoundButton(color: Color.black, iconName: "hand.thumbsup")
+                        .animation(Animation.linear(duration: 0.1))
+                        .scaleEffect(
+                            getOnFireAction(
+                                onLeft: 1.2,
+                                onRight: 1.0,
+                                offset: swipeDistance.width,
+                                winSize: window.size,
+                                onNone: 1.0
+                            )!,
+                            anchor: .top
+                        )
+                        .opacity(
+                            getOnFireAction(
+                                onLeft: 1,
+                                onRight: 0.5,
+                                offset: swipeDistance.width,
+                                winSize: window.size,
+                                onNone: 1
+                            )!
+                        )
+                        .padding(.horizontal)
+                    Text("\(controller.count) cards")
+                        .font(Font.custom("IBMPlexSans-Regular", size: 12.0))
+                        .foregroundColor(Color.gray)
+                        .padding(.horizontal)
+                    RoundButton(color: Color.red, iconName: "hand.thumbsdown")
+                        .animation(Animation.linear(duration: 0.1))
+                        .scaleEffect(
+                            getOnFireAction(
+                                onLeft: 1.0,
+                                onRight: 1.2,
+                                offset: swipeDistance.width,
+                                winSize: window.size,
+                                onNone: 1.0
+                            )!,
+                            anchor: .top
+                        )
+                        .opacity(
+                            getOnFireAction(
+                                onLeft: 0.5,
+                                onRight: 1,
+                                offset: swipeDistance.width,
+                                winSize: window.size,
+                                onNone: 1
+                            )!
+                        )
+                        .padding(.horizontal)
+                }
+                .zIndex(1000)
+                .padding()
+                .frame(alignment: .center)
+                .offset(x: 0, y: -115)
             }
         }
     }
@@ -64,21 +119,33 @@ struct CardsView: View {
     private func swipeGesture(winSize: CGSize) -> some Gesture {
         return DragGesture()
             .updating($swipeDistance) { latestSwipeDistance, gestureDistance, transaction in
-                var translation = latestSwipeDistance.translation
-                translation.width *= 1.2
-                gestureDistance = translation
+                gestureDistance = latestSwipeDistance.translation
             }
             .onEnded { finalDistance in
                 steadySwipeDistance = finalDistance.translation
                 let translation = finalDistance.translation.width,
-                    isGonnaFireAction = abs(translation) > winSize.width / 5 * 2
+                    isLiked = getOnFireAction(onLeft: false, onRight: true, offset: translation, winSize: winSize)
 
-                if isGonnaFireAction {
-                    moveCard(isLiked: translation > 0, winWidth: winSize.width)
+                if isLiked != nil {
+                    moveCard(isLiked: isLiked!, winWidth: winSize.width)
                 } else {
                     resetCardOffset()
                 }
             }
+    }
+    
+    private func getOnFireAction<T>(onLeft: T, onRight: T, offset: CGFloat, winSize: CGSize, onNone: T? = nil) -> T? {
+        let isGonnaFireAction = getIsGonnaFireAction(offset: offset, winSize: winSize)
+        
+        if isGonnaFireAction {
+            return offset > 0 ? onRight : onLeft
+        } else {
+            return onNone
+        }
+    }
+    
+    private func getIsGonnaFireAction(offset: CGFloat, winSize: CGSize) -> Bool {
+        return abs(offset) > winSize.width / 5 * 2
     }
     
     private func moveCard(isLiked: Bool, winWidth: CGFloat) {
