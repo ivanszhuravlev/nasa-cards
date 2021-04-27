@@ -11,7 +11,9 @@ struct ContentView: View {
     // MARK: - Temporary
     
     var body: some View {
-        CardsScreen()
+        NavigationView {
+            CardsScreen()
+        }
     }
 }
 

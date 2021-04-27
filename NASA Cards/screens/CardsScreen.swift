@@ -9,9 +9,26 @@ import SwiftUI
 
 struct CardsScreen: View {
     var body: some View {
-        VStack {
-            CardsView()
-        }
+            HeaderContainer {
+                CardsView()
+            }
+                .navigationBarTitle("My Mars", displayMode: .inline)
+                .navigationBarItems(leading:
+                    HStack {
+                        Button(action: {}) {
+                            Text("Undo")
+                                .foregroundColor(Color.red)
+                                .font(Font.custom("IBMPlexSans-Regular", size: 14))
+                        }
+                    }, trailing:
+                    HStack {
+                        NavigationLink(destination: FavouriteScreen()) {
+                                Image(systemName: "heart")
+                                    .font(.system(size: 20.0))
+                                    .foregroundColor(Color.red)
+                        }
+                    }
+                )
     }
 }
 

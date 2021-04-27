@@ -21,7 +21,7 @@ struct RoundButton: View {
         }
             .frame(width: 50, height: 50, alignment: .center)
             .offset(x: 0, y: -25)
-//        .animation(Animation.linear(duration: 0.1))
+//            .animation(Animation.linear(duration: 0.1))
     }
 }
 

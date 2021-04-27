@@ -9,9 +9,11 @@ import Foundation
 
 struct CardsApi {
     private var client = ApiClient()
+    private var page = 0
     
-    func getCards(onComplete: @escaping (_: [Photo]) -> Void) {
-        client.get(uri: "/rovers/curiosity/photos?sol=1000&page=1", type: PhotosResponse.self) { data in
+    mutating func getCards(onComplete: @escaping (_: [Photo]) -> Void) {
+        page += 1
+        client.get(uri: "/rovers/curiosity/photos?sol=1000&page=\(page)", type: PhotosResponse.self) { data in
             if data != nil {
                 onComplete(data!.photos)
             }

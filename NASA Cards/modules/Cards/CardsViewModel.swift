@@ -16,6 +16,8 @@ class CardsViewModel: ObservableObject {
             activePhotos = photosCut.indices.map { index in
                 CardStateful(photo: photosCut[index], state: getCardStateByIndex(index: index))
             }
+            
+            getMoreCards()
         }
     }
     
@@ -27,6 +29,12 @@ class CardsViewModel: ObservableObject {
     
     init() {
         
+    }
+    
+    private func getMoreCards() {
+        if model.photos.count <= 5 {
+            getCards()
+        }
     }
     
     func getCards() {

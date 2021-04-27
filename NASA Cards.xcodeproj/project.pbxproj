@@ -17,6 +17,8 @@
 		49A0915F2633413B002A3D10 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A0915E2633413B002A3D10 /* Card.swift */; };
 		49A0916C2636D8AF002A3D10 /* CardState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A0916B2636D8AF002A3D10 /* CardState.swift */; };
 		49A0917626381341002A3D10 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A0917526381341002A3D10 /* RoundButton.swift */; };
+		49A0917C26384C40002A3D10 /* HeaderContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A0917B26384C40002A3D10 /* HeaderContainer.swift */; };
+		49A0918126385527002A3D10 /* FavouriteScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A0918026385527002A3D10 /* FavouriteScreen.swift */; };
 		49B8F08126317BA8005B53FF /* NASA_CardsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B8F08026317BA8005B53FF /* NASA_CardsApp.swift */; };
 		49B8F08326317BA8005B53FF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B8F08226317BA8005B53FF /* ContentView.swift */; };
 		49B8F08526317BAA005B53FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49B8F08426317BAA005B53FF /* Assets.xcassets */; };
@@ -25,7 +27,6 @@
 		49B8F09526318270005B53FF /* icomoon.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 49B8F09226318270005B53FF /* icomoon.ttf */; };
 		49B8F09626318270005B53FF /* IBMPlexSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 49B8F09326318270005B53FF /* IBMPlexSans-Regular.ttf */; };
 		49B8F09A26318347005B53FF /* CardsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B8F09926318347005B53FF /* CardsScreen.swift */; };
-		49B8F09E26318386005B53FF /* ScreenContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B8F09D26318386005B53FF /* ScreenContainer.swift */; };
 		49B8F0A12631853A005B53FF /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B8F0A02631853A005B53FF /* ApiClient.swift */; };
 		49B8F0A82631BCA5005B53FF /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 49B8F0A72631BCA5005B53FF /* Podfile */; };
 		6482FFB86B4BEC8E21D55A9F /* libPods-NASA Cards.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EF43E01BD0B112F1BA58F4E1 /* libPods-NASA Cards.a */; };
@@ -42,6 +43,8 @@
 		49A0915E2633413B002A3D10 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		49A0916B2636D8AF002A3D10 /* CardState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardState.swift; sourceTree = "<group>"; };
 		49A0917526381341002A3D10 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
+		49A0917B26384C40002A3D10 /* HeaderContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderContainer.swift; sourceTree = "<group>"; };
+		49A0918026385527002A3D10 /* FavouriteScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteScreen.swift; sourceTree = "<group>"; };
 		49B8F07D26317BA7005B53FF /* NASA Cards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NASA Cards.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		49B8F08026317BA8005B53FF /* NASA_CardsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NASA_CardsApp.swift; sourceTree = "<group>"; };
 		49B8F08226317BA8005B53FF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -52,7 +55,6 @@
 		49B8F09226318270005B53FF /* icomoon.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = icomoon.ttf; sourceTree = "<group>"; };
 		49B8F09326318270005B53FF /* IBMPlexSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IBMPlexSans-Regular.ttf"; sourceTree = "<group>"; };
 		49B8F09926318347005B53FF /* CardsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsScreen.swift; sourceTree = "<group>"; };
-		49B8F09D26318386005B53FF /* ScreenContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenContainer.swift; sourceTree = "<group>"; };
 		49B8F0A02631853A005B53FF /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
 		49B8F0A72631BCA5005B53FF /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; fileEncoding = 4; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		4DE5A2136356E894C7346549 /* Pods-NASA Cards.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NASA Cards.release.xcconfig"; path = "Target Support Files/Pods-NASA Cards/Pods-NASA Cards.release.xcconfig"; sourceTree = "<group>"; };
@@ -170,6 +172,7 @@
 			isa = PBXGroup;
 			children = (
 				49B8F09926318347005B53FF /* CardsScreen.swift */,
+				49A0918026385527002A3D10 /* FavouriteScreen.swift */,
 			);
 			path = screens;
 			sourceTree = "<group>";
@@ -177,7 +180,7 @@
 		49B8F09C26318373005B53FF /* components */ = {
 			isa = PBXGroup;
 			children = (
-				49B8F09D26318386005B53FF /* ScreenContainer.swift */,
+				49A0917B26384C40002A3D10 /* HeaderContainer.swift */,
 				49A0917526381341002A3D10 /* RoundButton.swift */,
 			);
 			path = components;
@@ -299,10 +302,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49A0917C26384C40002A3D10 /* HeaderContainer.swift in Sources */,
 				49A091572633264B002A3D10 /* PhotoView.swift in Sources */,
 				49A0914F26332468002A3D10 /* PhotoViewModel.swift in Sources */,
 				49A0910D2632C1FD002A3D10 /* Photo.swift in Sources */,
 				49B8F08326317BA8005B53FF /* ContentView.swift in Sources */,
+				49A0918126385527002A3D10 /* FavouriteScreen.swift in Sources */,
 				49A0915F2633413B002A3D10 /* Card.swift in Sources */,
 				49A0916C2636D8AF002A3D10 /* CardState.swift in Sources */,
 				49A0917626381341002A3D10 /* RoundButton.swift in Sources */,
@@ -311,7 +316,6 @@
 				49A0915C26333F3A002A3D10 /* CardsView.swift in Sources */,
 				49B8F09A26318347005B53FF /* CardsScreen.swift in Sources */,
 				49B8F08126317BA8005B53FF /* NASA_CardsApp.swift in Sources */,
-				49B8F09E26318386005B53FF /* ScreenContainer.swift in Sources */,
 				49A0913026330888002A3D10 /* CardsApi.swift in Sources */,
 				49B8F0A12631853A005B53FF /* ApiClient.swift in Sources */,
 			);

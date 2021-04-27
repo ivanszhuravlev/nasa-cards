@@ -83,7 +83,7 @@ struct CardsView: View {
                 .zIndex(1000)
                 .padding()
                 .frame(alignment: .center)
-                .offset(x: 0, y: -115)
+                .offset(x: 0, y: -75)
             }
         }
     }
