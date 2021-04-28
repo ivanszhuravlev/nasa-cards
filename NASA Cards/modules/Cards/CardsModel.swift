@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import Combine
 
 struct CardsModel {
     var photos: [Photo] = []
@@ -14,5 +13,4 @@ struct CardsModel {
     mutating func updatePhotos(photos: [Photo]) {
         self.photos.append(contentsOf: photos)
     }
-    
 }

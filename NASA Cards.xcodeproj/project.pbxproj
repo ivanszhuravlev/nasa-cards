@@ -11,7 +11,6 @@
 		49A091162632E6C8002A3D10 /* CardsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A091152632E6C8002A3D10 /* CardsModel.swift */; };
 		49A0913026330888002A3D10 /* CardsApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A0912F26330888002A3D10 /* CardsApi.swift */; };
 		49A0913526330E6E002A3D10 /* CardsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A0913426330E6E002A3D10 /* CardsViewModel.swift */; };
-		49A0914F26332468002A3D10 /* PhotoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A0914E26332468002A3D10 /* PhotoViewModel.swift */; };
 		49A091572633264B002A3D10 /* PhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A091562633264B002A3D10 /* PhotoView.swift */; };
 		49A0915C26333F3A002A3D10 /* CardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A0915B26333F3A002A3D10 /* CardsView.swift */; };
 		49A0915F2633413B002A3D10 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A0915E2633413B002A3D10 /* Card.swift */; };
@@ -19,6 +18,13 @@
 		49A0917626381341002A3D10 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A0917526381341002A3D10 /* RoundButton.swift */; };
 		49A0917C26384C40002A3D10 /* HeaderContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A0917B26384C40002A3D10 /* HeaderContainer.swift */; };
 		49A0918126385527002A3D10 /* FavouriteScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A0918026385527002A3D10 /* FavouriteScreen.swift */; };
+		49A09185263869E8002A3D10 /* FavouritesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A09184263869E8002A3D10 /* FavouritesModel.swift */; };
+		49A0918826386AC3002A3D10 /* FavouritesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A0918726386AC3002A3D10 /* FavouritesViewModel.swift */; };
+		49A0918B26386BE1002A3D10 /* FavouritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A0918A26386BE1002A3D10 /* FavouritesView.swift */; };
+		49A0918E26387087002A3D10 /* ImageItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A0918D26387087002A3D10 /* ImageItem.swift */; };
+		49A0919226395DB6002A3D10 /* ImagesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A0919126395DB6002A3D10 /* ImagesViewModel.swift */; };
+		49A0919526395DD2002A3D10 /* ImagesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A0919426395DD2002A3D10 /* ImagesModel.swift */; };
+		49A0919826395E80002A3D10 /* ImagesApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A0919726395E80002A3D10 /* ImagesApi.swift */; };
 		49B8F08126317BA8005B53FF /* NASA_CardsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B8F08026317BA8005B53FF /* NASA_CardsApp.swift */; };
 		49B8F08326317BA8005B53FF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B8F08226317BA8005B53FF /* ContentView.swift */; };
 		49B8F08526317BAA005B53FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49B8F08426317BAA005B53FF /* Assets.xcassets */; };
@@ -37,7 +43,6 @@
 		49A091152632E6C8002A3D10 /* CardsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsModel.swift; sourceTree = "<group>"; };
 		49A0912F26330888002A3D10 /* CardsApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsApi.swift; sourceTree = "<group>"; };
 		49A0913426330E6E002A3D10 /* CardsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsViewModel.swift; sourceTree = "<group>"; };
-		49A0914E26332468002A3D10 /* PhotoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewModel.swift; sourceTree = "<group>"; };
 		49A091562633264B002A3D10 /* PhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoView.swift; sourceTree = "<group>"; };
 		49A0915B26333F3A002A3D10 /* CardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsView.swift; sourceTree = "<group>"; };
 		49A0915E2633413B002A3D10 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
@@ -45,6 +50,13 @@
 		49A0917526381341002A3D10 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		49A0917B26384C40002A3D10 /* HeaderContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderContainer.swift; sourceTree = "<group>"; };
 		49A0918026385527002A3D10 /* FavouriteScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteScreen.swift; sourceTree = "<group>"; };
+		49A09184263869E8002A3D10 /* FavouritesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesModel.swift; sourceTree = "<group>"; };
+		49A0918726386AC3002A3D10 /* FavouritesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesViewModel.swift; sourceTree = "<group>"; };
+		49A0918A26386BE1002A3D10 /* FavouritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesView.swift; sourceTree = "<group>"; };
+		49A0918D26387087002A3D10 /* ImageItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageItem.swift; sourceTree = "<group>"; };
+		49A0919126395DB6002A3D10 /* ImagesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesViewModel.swift; sourceTree = "<group>"; };
+		49A0919426395DD2002A3D10 /* ImagesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesModel.swift; sourceTree = "<group>"; };
+		49A0919726395E80002A3D10 /* ImagesApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesApi.swift; sourceTree = "<group>"; };
 		49B8F07D26317BA7005B53FF /* NASA Cards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NASA Cards.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		49B8F08026317BA8005B53FF /* NASA_CardsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NASA_CardsApp.swift; sourceTree = "<group>"; };
 		49B8F08226317BA8005B53FF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -86,6 +98,8 @@
 		49A0912D26330871002A3D10 /* modules */ = {
 			isa = PBXGroup;
 			children = (
+				49A0919026395DA4002A3D10 /* Images */,
+				49A09183263869D1002A3D10 /* Favourites */,
 				49A09145263323EF002A3D10 /* Photo */,
 				49A0912E26330876002A3D10 /* Cards */,
 			);
@@ -107,10 +121,29 @@
 		49A09145263323EF002A3D10 /* Photo */ = {
 			isa = PBXGroup;
 			children = (
-				49A0914E26332468002A3D10 /* PhotoViewModel.swift */,
 				49A091562633264B002A3D10 /* PhotoView.swift */,
 			);
 			path = Photo;
+			sourceTree = "<group>";
+		};
+		49A09183263869D1002A3D10 /* Favourites */ = {
+			isa = PBXGroup;
+			children = (
+				49A09184263869E8002A3D10 /* FavouritesModel.swift */,
+				49A0918726386AC3002A3D10 /* FavouritesViewModel.swift */,
+				49A0918A26386BE1002A3D10 /* FavouritesView.swift */,
+			);
+			path = Favourites;
+			sourceTree = "<group>";
+		};
+		49A0919026395DA4002A3D10 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				49A0919126395DB6002A3D10 /* ImagesViewModel.swift */,
+				49A0919726395E80002A3D10 /* ImagesApi.swift */,
+				49A0919426395DD2002A3D10 /* ImagesModel.swift */,
+			);
+			path = Images;
 			sourceTree = "<group>";
 		};
 		49B8F07426317BA7005B53FF = {
@@ -182,6 +215,7 @@
 			children = (
 				49A0917B26384C40002A3D10 /* HeaderContainer.swift */,
 				49A0917526381341002A3D10 /* RoundButton.swift */,
+				49A0918D26387087002A3D10 /* ImageItem.swift */,
 			);
 			path = components;
 			sourceTree = "<group>";
@@ -304,18 +338,24 @@
 			files = (
 				49A0917C26384C40002A3D10 /* HeaderContainer.swift in Sources */,
 				49A091572633264B002A3D10 /* PhotoView.swift in Sources */,
-				49A0914F26332468002A3D10 /* PhotoViewModel.swift in Sources */,
+				49A0918826386AC3002A3D10 /* FavouritesViewModel.swift in Sources */,
+				49A09185263869E8002A3D10 /* FavouritesModel.swift in Sources */,
+				49A0918E26387087002A3D10 /* ImageItem.swift in Sources */,
+				49A0919226395DB6002A3D10 /* ImagesViewModel.swift in Sources */,
 				49A0910D2632C1FD002A3D10 /* Photo.swift in Sources */,
 				49B8F08326317BA8005B53FF /* ContentView.swift in Sources */,
 				49A0918126385527002A3D10 /* FavouriteScreen.swift in Sources */,
 				49A0915F2633413B002A3D10 /* Card.swift in Sources */,
 				49A0916C2636D8AF002A3D10 /* CardState.swift in Sources */,
 				49A0917626381341002A3D10 /* RoundButton.swift in Sources */,
+				49A0919526395DD2002A3D10 /* ImagesModel.swift in Sources */,
 				49A0913526330E6E002A3D10 /* CardsViewModel.swift in Sources */,
 				49A091162632E6C8002A3D10 /* CardsModel.swift in Sources */,
 				49A0915C26333F3A002A3D10 /* CardsView.swift in Sources */,
 				49B8F09A26318347005B53FF /* CardsScreen.swift in Sources */,
+				49A0919826395E80002A3D10 /* ImagesApi.swift in Sources */,
 				49B8F08126317BA8005B53FF /* NASA_CardsApp.swift in Sources */,
+				49A0918B26386BE1002A3D10 /* FavouritesView.swift in Sources */,
 				49A0913026330888002A3D10 /* CardsApi.swift in Sources */,
 				49B8F0A12631853A005B53FF /* ApiClient.swift in Sources */,
 			);

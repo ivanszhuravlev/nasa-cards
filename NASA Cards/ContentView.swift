@@ -8,12 +8,17 @@
 import SwiftUI
 
 struct ContentView: View {
-    // MARK: - Temporary
+    @ObservedObject var cardsController = CardsViewModel()
+    @ObservedObject var favouritesController = FavouritesViewModel()
+    @ObservedObject var imagesController = ImagesViewModel()
     
     var body: some View {
         NavigationView {
             CardsScreen()
         }
+        .environmentObject(cardsController)
+        .environmentObject(favouritesController)
+        .environmentObject(imagesController)
     }
 }
 

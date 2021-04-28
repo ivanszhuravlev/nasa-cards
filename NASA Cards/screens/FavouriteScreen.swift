@@ -12,9 +12,9 @@ struct FavouriteScreen: View {
     
     var body: some View {
             HeaderContainer {
-                Text("LIBRARY")
+                FavouritesView()
             }
-            .navigationBarTitle("My Mars", displayMode: .inline)
+            .navigationBarTitle("Library", displayMode: .inline)
             .navigationBarItems(leading:
                 HStack {
                         Button(action: {

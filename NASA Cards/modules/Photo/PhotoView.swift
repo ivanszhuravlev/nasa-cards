@@ -8,17 +8,20 @@
 import SwiftUI
 
 struct PhotoView: View {
-    @ObservedObject var model: PhotoViewModel
+    var url: String
     
-    init(url: String) {
-        self.model = PhotoViewModel(url: url)
-    }
+    @EnvironmentObject var images: ImagesViewModel
     
     var body: some View {
-        if model.image != nil {
-            Image(uiImage: model.image!)
-        } else {
-            Color(UIColor.red)
+        ZStack {
+            if let image = images.images[url], image != nil {
+                Image(uiImage: image)
+            } else {
+                Color(UIColor.lightGray)
+            }
+        }
+        .onAppear {
+            images.saveImage(url: url)
         }
     }
     

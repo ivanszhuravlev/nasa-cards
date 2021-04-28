@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct CardsView: View {
-    @ObservedObject var controller = CardsViewModel()
+    @EnvironmentObject var controller: CardsViewModel
+    @EnvironmentObject var favouritesController: FavouritesViewModel
     
     @State var cardsToRemoveCount: Int = 0
     
@@ -31,7 +32,7 @@ struct CardsView: View {
                     controller.getCards()
                 }
                 HStack {
-                    RoundButton(color: Color.black, iconName: "hand.thumbsup")
+                    RoundButton(color: Color.black, iconName: "hand.thumbsdown")
                         .animation(Animation.linear(duration: 0.1))
                         .scaleEffect(
                             getOnFireAction(
@@ -57,7 +58,7 @@ struct CardsView: View {
                         .font(Font.custom("IBMPlexSans-Regular", size: 12.0))
                         .foregroundColor(Color.gray)
                         .padding(.horizontal)
-                    RoundButton(color: Color.red, iconName: "hand.thumbsdown")
+                    RoundButton(color: Color.red, iconName: "hand.thumbsup")
                         .animation(Animation.linear(duration: 0.1))
                         .scaleEffect(
                             getOnFireAction(
@@ -85,6 +86,7 @@ struct CardsView: View {
                 .frame(alignment: .center)
                 .offset(x: 0, y: -75)
             }
+            .environmentObject(favouritesController)
         }
     }
     
@@ -151,6 +153,10 @@ struct CardsView: View {
     private func moveCard(isLiked: Bool, winWidth: CGFloat) {
         let x = isLiked ? winWidth : -winWidth
 
+        if (isLiked) {
+            favouritesController.savePhoto(photo: controller.activePhotos[0])
+        }
+        
         steadySwipeDistance = CGSize(width: x, height: 0)
         
         Timer.scheduledTimer(withTimeInterval: 0.1, repeats: false) { timer in
