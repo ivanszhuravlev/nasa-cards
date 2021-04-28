@@ -15,7 +15,7 @@ struct PhotoView: View {
     var body: some View {
         ZStack {
             if let image = images.images[url], image != nil {
-                Image(uiImage: image)
+                Image(uiImage: image).resizable()
             } else {
                 Color(UIColor.lightGray)
             }

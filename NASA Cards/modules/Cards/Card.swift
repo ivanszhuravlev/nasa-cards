@@ -38,6 +38,7 @@ struct Card: View {
     var body: some View {
         Group {
             PhotoView(url: url)
+                .aspectRatio(contentMode: .fill)
                 .frame(width: size.width, height: size.width * 1.5, alignment: .center)
                 .cornerRadius(10.0)
                 .offset(x: 0.0, y: offset)
@@ -45,6 +46,7 @@ struct Card: View {
                 .shadow(color: Color.black.opacity(0.4), radius: 6, x: 0.0, y: 0.0)
                 .opacity(opacity)
                 .animation(Animation.linear(duration: 0.1))
+            
         }        
     }
     

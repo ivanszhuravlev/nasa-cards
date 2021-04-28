@@ -154,6 +154,7 @@ struct CardsView: View {
         let x = isLiked ? winWidth : -winWidth
 
         if (isLiked) {
+            print("HOI", controller.activePhotos[0].img_src)
             favouritesController.savePhoto(photo: controller.activePhotos[0])
         }
         

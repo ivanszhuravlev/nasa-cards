@@ -8,8 +8,11 @@
 import SwiftUI
 
 struct FavouritesView: View {
-//    @StateObject var favouritesController = FavouritesViewModel()
     @EnvironmentObject var favouritesController: FavouritesViewModel
+    
+//    var formattedPhotos: [(CardStateful, CardStateful)] {
+//        
+//    }
     
     var body: some View {
         List {
