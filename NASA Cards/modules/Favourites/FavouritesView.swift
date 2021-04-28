@@ -10,15 +10,21 @@ import SwiftUI
 struct FavouritesView: View {
     @EnvironmentObject var favouritesController: FavouritesViewModel
     
-//    var formattedPhotos: [(CardStateful, CardStateful)] {
-//        
-//    }
+    let columns: [GridItem] = [
+        GridItem(.flexible(minimum: 100), spacing: 12, alignment: .center),
+        GridItem(.flexible(minimum: 100), spacing: 12, alignment: .center)
+    ]
     
     var body: some View {
-        List {
-            ForEach(favouritesController.savedPhotos) { photo in
-                Text("\(photo.id!)")
+        ScrollView {
+            LazyVGrid(columns: columns, alignment: .center, spacing: 12, pinnedViews: []) {
+                ForEach(favouritesController.savedPhotos) { photo in
+                    PhotoView(url: photo.img_src!)
+                        .aspectRatio(0.9, contentMode: .fill)
+                        .cornerRadius(12)
+                }
             }
-        }
+
+        }.padding()
     }
 }
